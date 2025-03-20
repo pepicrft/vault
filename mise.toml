@@ -5,6 +5,12 @@ node = "22.14.0"
 yarn = "1.22.22"
 java = "24"
 "npm:wrangler" = "4.2.0"
+"sops" = "3.9.3"
+"age" = "1.2.1"
 
 [env]
 _.path = ['{{config_root}}/node_modules/.bin']
+_.file = ".env.json"
+
+[settings.sops]
+age_key_file = "~/.config/mise/age-pepicrft.txt"
