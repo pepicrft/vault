@@ -4,6 +4,10 @@ on:
     branches:
       - main
 
+env:
+  MISE_EXPERIMENTAL: "1"
+  MISE_SOPS_AGE_KEY: ${{ secrets.MISE_SOPS_AGE_KEY }}
+
 jobs:
   cloudflare:
     name: Cloudflare
