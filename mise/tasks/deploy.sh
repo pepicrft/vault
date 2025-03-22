@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #MISE description="Deploy the site"
 
+set -eo pipefail
+
 temp_dir=$(mktemp -d)
 trap 'rm -rf "$temp_dir"' EXIT
 
@@ -11,15 +13,15 @@ rm -rf $build_directory
 
 logseq_directory=$temp_dir/logseq
 git clone --depth 1 "https://$GITHUB_TOKEN@github.com/logseq/logseq.git" "$logseq_directory"
-git fetch --depth 1 -C "$logseq_directory" origin "$logseq_commit"
+git -C "$logseq_directory" fetch --depth 1 origin "$logseq_commit"
 git -C "$logseq_directory" checkout "$logseq_commit"
 yarn install --frozen-lockfile --cwd $logseq_directory
 yarn --cwd $logseq_directory gulp:build
 (cd $logseq_directory && clojure -M:cljs release publishing)
 
 logseq_publish_spa_directory=$temp_dir/logseq-publish-spa
-git clone --depth 1 "https://$GITHUB_TOKEN@github.com/publish-spa.git" "$logseq_publish_spa_directory"
-git fetch --depth 1 -C "$logseq_publish_spa_directory" origin "$logseq_publish_spa_commit"
+git clone --depth 1 "https://$GITHUB_TOKEN@github.com/logseq/publish-spa.git" "$logseq_publish_spa_directory"
+git -C "$logseq_publish_spa_directory" fetch --depth 1 origin "$logseq_publish_spa_commit"
 git -C "$logseq_publish_spa_directory" checkout "$logseq_publish_spa_commit"
 yarn install --frozen-lockfile --cwd $logseq_publish_spa_directory
 yarn --cwd $logseq_publish_spa_directory nbb-logseq -e ':fetching-deps'

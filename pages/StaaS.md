@@ -1,0 +1,3 @@
+- StaaS stands for "Status as a Service"
+- It's this idea that humans are attention-seeking monkeys, and that social media companies like [[Meta]] or [[ByteDance]] provide status as a service. It's an exchange of social capital, where we commit our time, attention, and content, in exchange for a social status.
+- Something that I found interesting is that the idea o [[Proof of work]] and the limited pool of resources, which is common in the cryptocurrency work, applies to StaaS too. Reaching status is easy initially but it becomes harder as there are more people on the platform. If it was easy, the value of the platform would diminish.

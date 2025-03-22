@@ -1,0 +1,2 @@
+- Proposed by the anthropologist [[Robin Dunbar]], it's a cognitive limit to the number of stable social connections that a person can maintain #anthropology. It's estimated to be around 150.
+-
