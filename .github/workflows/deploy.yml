@@ -19,8 +19,4 @@ jobs:
       - uses: jdx/mise-action@v2
         with:
           cache: true
-      - uses: logseq/publish-spa@main
-        with:
-          output-directory: build
-          version: nightly
       - run: mise run deploy
