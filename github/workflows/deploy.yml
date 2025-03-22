@@ -16,7 +16,11 @@ jobs:
     runs-on: docker
     steps:
       - uses: actions/checkout@v3
-      - uses: https://github.com/jdx/mise-action@v2
+      - uses: jdx/mise-action@v2
         with:
           cache: true
+      - uses: logseq/publish-spa@main
+        with:
+          output-directory: build
+          version: nightly
       - run: mise run deploy
