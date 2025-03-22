@@ -13,7 +13,7 @@ env:
 jobs:
   cloudflare:
     name: Cloudflare
-    runs-on: docker
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: jdx/mise-action@v2
