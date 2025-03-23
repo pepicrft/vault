@@ -7,6 +7,8 @@ java = "24"
 "npm:wrangler" = "4.2.0"
 "sops" = "3.9.4"
 "age" = "1.2.1"
+pkl = "latest"
+hk = "0.6.1"
 
 [env]
 _.path = ['{{config_root}}/node_modules/.bin']
