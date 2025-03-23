@@ -26,6 +26,6 @@ git -C "$logseq_publish_spa_directory" checkout "$logseq_publish_spa_commit"
 yarn install --frozen-lockfile --cwd $logseq_publish_spa_directory
 yarn --cwd $logseq_publish_spa_directory nbb-logseq -e ':fetching-deps'
 
-node $logseq_publish_spa_directory/publish_spa.mjs $build_directory --static-directory $logseq_directory/static --directory . --theme-mode light --accent-color blue
+node $logseq_publish_spa_directory/publish_spa.mjs $build_directory --static-directory $logseq_directory/static --directory $MISE_PROJECT_ROOT --theme-mode light --accent-color blue
 
 wrangler pages deploy $build_directory --project-name vault --branch main
