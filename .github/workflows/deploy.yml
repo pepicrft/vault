@@ -19,4 +19,5 @@ jobs:
       - uses: jdx/mise-action@v2
         with:
           cache: true
+      - run: sudo apt install libpixman-1-dev libcairo2-dev libpango1.0-dev libjpeg8-dev libgif-dev
       - run: mise run deploy
