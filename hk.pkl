@@ -1,7 +1,7 @@
 amends "package://github.com/jdx/hk/releases/download/v0.6.1/hk@0.6.1#/Config.pkl"
 
 hooks {
-    ["pre-commit"] {
+    ["post-commit"] {
         ["push-upstream"] {
             exclusive = true
             run = "git push origin main"
