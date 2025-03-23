@@ -8,7 +8,7 @@ trap 'rm -rf "$temp_dir"' EXIT
 
 logseq_commit="2d8e80954e5de53d62ff4713de0289e9a21c039d"
 logseq_publish_spa_commit="353b3654d00d6a5df2bb7b8bfef93766cdaad01c"
-build_directory="build/"
+build_directory="$MISE_PROJECT_ROOT/build/"
 rm -rf $build_directory
 
 logseq_directory=$temp_dir/logseq
