@@ -5,3 +5,4 @@ public:: true
 	- Which techniques are used to retain the value capturing.
 	- How might the space evolve in the following years
 	- Why do mobile CI companies want to be more than just CI
+- Vercel's business model with NextJS, the constant pushes by the community to allow developers to run their NextJS apps in Cloudflare, and the importance of not trying to over-capture.
