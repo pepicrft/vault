@@ -14,5 +14,8 @@ hk = "0.6.1"
 _.path = ['{{config_root}}/node_modules/.bin']
 _.file = ".env.json"
 
+[hooks]
+"postinstall" = "hk install"
+
 [settings.sops]
 age_key_file = "~/.config/mise/age-pepicrft.txt"
